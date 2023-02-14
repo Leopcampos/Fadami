@@ -1,0 +1,41 @@
+﻿@model List<Usuario>
+@{
+    ViewData["Title"] = "Listagem de Usuários";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Listagem de Usuários</h1>
+    <br />
+    <br />
+    <a class="btn btn-primary btn-block" asp-area="" asp-controller="Login" asp-action="Sair" role="button">Sair</a>
+    <table id="table-usuarios" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Login</th>
+                <th scope="col">CPF</th>
+                <th scope="col">Último Acesso</th>
+                <th scope="col">Qtd Erro Login</th>
+                <th scope="col">BL Ativo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var usuario in Model)
+                {
+                    <tr>
+                        <td scope="row">@usuario.Codigo</td>
+                        <td>@usuario.Nome</td>
+                        <td>@usuario.Login</td>
+                        <td>@usuario.CPF</td>
+                        <td>@usuario.UltimoAcesso</td>
+                        <td>@usuario.QtdErroLogin</td>
+                        <td>@usuario.BLAtivo</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
