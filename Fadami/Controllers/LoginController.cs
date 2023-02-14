@@ -30,9 +30,16 @@ namespace Fadami.Controllers
 
         public IActionResult Sair()
         {
+            // Obtém o usuário atualmente logado
+            Usuario usuario = _sessao.BuscarSessaoDoUsuario();
+
+            // Remove a sessão do usuário anterior
             _sessao.RemoverSessaoDoUsuario();
+            HttpContext.Session.Clear();
+
             return RedirectToAction("Index", "Login");
         }
+
 
         [HttpPost]
         public IActionResult Entrar(LoginModel loginModel)

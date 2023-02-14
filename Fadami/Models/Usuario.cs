@@ -40,5 +40,11 @@ namespace Fadami.Models
         {
             return Senha == senha;
         }
+
+        public override string ToString()
+        {
+            return $"Código: {Codigo}, Nome: {Nome}, Login: {Login}, CPF: {CPF}, Último Acesso: {UltimoAcesso}, Qtd Erro Login: {QtdErroLogin}, BL Ativo: {BLAtivo}";
+        }
+
     }
 }

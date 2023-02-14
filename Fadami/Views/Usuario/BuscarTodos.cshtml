@@ -4,10 +4,17 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Listagem de Usuários</h1>
+    <h1 class="display-4">Sessão do usuário</h1>
     <br />
     <br />
-    <a class="btn btn-primary btn-block" asp-area="" asp-controller="Login" asp-action="Sair" role="button">Sair</a>
+    <h3 class="user">
+        @foreach (var usuario in Model)
+        {
+            <h4 class="tostring">@usuario.ToString()</h4>
+        }
+    </h3>
+    <a class="btn btn-danger" asp-area="" asp-controller="Login" asp-action="Sair" role="button">Sair</a>
+    <h2 class="display-4">Consultário usuário</h2>
     <table id="table-usuarios" class="display" style="width:100%">
         <thead>
             <tr>
