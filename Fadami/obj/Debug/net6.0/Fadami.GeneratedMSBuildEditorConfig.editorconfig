@@ -9,73 +9,77 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Fadami
 build_property.RootNamespace = Fadami
-build_property.ProjectDir = C:\Leo\Projetos\Projetos em MVC\Fadami\Fadami\
+build_property.ProjectDir = C:\Projetos\Projetos em MVC\Fadami\Fadami\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Leo\Projetos\Projetos em MVC\Fadami\Fadami
+build_property.MSBuildProjectDirectory = C:\Projetos\Projetos em MVC\Fadami\Fadami
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Home/Index.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Home/Privacy.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Login/Index.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Login/CriarNovoLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ3JpYXJOb3ZvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Restrito/Index.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Restrito/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdHJpdG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/Components/Menu/Default.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/Components/Menu/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWVudVxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/Error.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/_LayoutDeslogado.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/_LayoutDeslogado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXREZXNsb2dhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/ApagarConfirmacao.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/ApagarConfirmacao.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBcGFnYXJDb25maXJtYWNhby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/BuscarTodos.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/BuscarTodos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xCdXNjYXJUb2Rvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/Criar.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/Criar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmlhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/Editar.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/Index.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Usuario/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/_ViewImports.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/_ViewStart.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Leo/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/_Layout.cshtml]
+[C:/Projetos/Projetos em MVC/Fadami/Fadami/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-qyfwjcpk88

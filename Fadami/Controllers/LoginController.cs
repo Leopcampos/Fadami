@@ -94,5 +94,26 @@ namespace Fadami.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        [HttpPost]
+        public IActionResult CriarNovoLogin(Usuario usuario)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _usuarioReposity.Adicionar(usuario);
+                    TempData["MensagemSucesso"] = "Usuário cadastrado com sucesso";
+                    return RedirectToAction("Index", "Login");
+                }
+                return View(usuario);
+            }
+            catch (Exception erro)
+            {
+
+                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o usuário, tente novamente, detalhe do erro:{erro.Message}";
+                return RedirectToAction("Index", "Login");
+            }
+        }
     }
 }

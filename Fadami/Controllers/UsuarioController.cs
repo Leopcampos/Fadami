@@ -35,7 +35,6 @@ namespace Fadami.Controllers
         }
 
         [HttpPost]
-        [HttpPost]
         public IActionResult Criar(Usuario usuario)
         {
             try
@@ -55,7 +54,6 @@ namespace Fadami.Controllers
                 return RedirectToAction("Criar");
             }
         }
-
 
         public IActionResult Editar(int id)
         {
