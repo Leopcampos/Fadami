@@ -8,13 +8,13 @@ namespace Fadami.Controllers
 {
     public class LoginController : Controller
     {
-        private readonly IUsuarioRepository _usuarioReposity;
+        private readonly IUsuarioRepository _usuarioRepository;
 
         private readonly ISessao _sessao;
 
         public LoginController(IUsuarioRepository usuarioReposity, ISessao sessao)
         {
-            _usuarioReposity = usuarioReposity;
+            _usuarioRepository = usuarioReposity;
             _sessao = sessao;
         }
 
@@ -27,6 +27,10 @@ namespace Fadami.Controllers
             return View();
         }
 
+        public IActionResult RedefinirSenha()
+        {
+            return View();
+        }
 
         public IActionResult Sair()
         {
@@ -48,7 +52,7 @@ namespace Fadami.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    Usuario usuario = _usuarioReposity.BuscarPorLogin(loginModel.Login);
+                    Usuario usuario = _usuarioRepository.BuscarPorLogin(loginModel.Login);
 
                     if (usuario != null)
                     {
@@ -62,7 +66,7 @@ namespace Fadami.Controllers
 
                             usuario.QtdErroLogin = 0;
                             usuario.UltimoAcesso = DateTime.Now;
-                            _usuarioReposity.AtualizarUsuario(usuario);
+                            _usuarioRepository.AtualizarUsuario(usuario);
                             _sessao.CriarSessaoDoUsuario(usuario);
 
                             return RedirectToAction("Index", "Home");
@@ -73,14 +77,14 @@ namespace Fadami.Controllers
                         if (usuario.QtdErroLogin >= 3)
                         {
                             usuario.BLAtivo = false;
-                            _usuarioReposity.AtualizarUsuario(usuario);
+                            _usuarioRepository.AtualizarUsuario(usuario);
 
                             TempData["MensagemErro"] = $"Usuário bloqueado após 3 tentativas de login falhas";
                             return RedirectToAction("Index");
                         }
 
                         usuario.QtdErroLogin++;
-                        _usuarioReposity.AtualizarUsuario(usuario);
+                        _usuarioRepository.AtualizarUsuario(usuario);
                     }
 
                     TempData["MensagemErro"] = $"Usuário e/ou inválido";
@@ -96,24 +100,25 @@ namespace Fadami.Controllers
         }
 
         [HttpPost]
-        public IActionResult CriarNovoLogin(Usuario usuario)
+        public IActionResult NovoLogin(Usuario usuario)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _usuarioReposity.Adicionar(usuario);
-                    TempData["MensagemSucesso"] = "Usuário cadastrado com sucesso";
+                    _usuarioRepository.Adicionar(usuario);
+                    TempData["MensagemSucesso"] = "Novo login cadastrado com sucesso";
+                    _sessao.CriarSessaoDoUsuario(usuario);
                     return RedirectToAction("Index", "Login");
                 }
                 return View(usuario);
             }
             catch (Exception erro)
             {
-
-                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o usuário, tente novamente, detalhe do erro:{erro.Message}";
-                return RedirectToAction("Index", "Login");
+                TempData["MensagemErro"] = $"Ops, não conseguimos cadastrar o login, tente novamente, detalhe do erro:{erro.Message}";
+                return RedirectToAction("NovoLogin", "Login");
             }
         }
+
     }
 }

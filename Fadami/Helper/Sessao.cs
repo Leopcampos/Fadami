@@ -26,6 +26,12 @@ namespace Fadami.Helper
             string valor = JsonConvert.SerializeObject(usuario);
             _httpContext.HttpContext.Session.SetString("sessaoUsuarioLogado", valor);
         }
+        
+        public void CriarSessaoDoUsuarioSemLogin(Usuario usuario)
+        {
+            string semValor = JsonConvert.SerializeObject(usuario);
+            _httpContext.HttpContext.Session.SetString("sessaoUsuarioSemLogin", semValor);
+        }
 
         public void RemoverSessaoDoUsuario()
         {

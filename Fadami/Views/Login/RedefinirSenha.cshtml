@@ -2,15 +2,7 @@
 
 @{
     Layout = "_LayoutDeslogado";
-    ViewData["Title"] = "Login";
-}
-
-@if (TempData["MensagemSucesso"] != null)
-{
-    <div class="alert alert-success" role="alert">
-        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
-        @TempData["MensagemSucesso"]
-    </div>
+    ViewData["Title"] = "Redefinir senha";
 }
 
 @if (TempData["MensagemErro"] != null)
@@ -33,6 +25,6 @@
         <span asp-validation-for="Senha" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-    <button type="submit" class="btn btn-success btn-block" asp-controller="Login" asp-action="NovoLogin">Criar Login</button>
+    <button type="submit" class="btn btn-primary btn-block">Redefinir Senha</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Login" asp-action="Index" role="button">Voltar</a>
 </form>

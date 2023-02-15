@@ -10,7 +10,8 @@ namespace Fadami.ViewComponents
         {
             string sessaoUsuario = HttpContext.Session.GetString("sessaoUsuarioLogado");
 
-            if (string.IsNullOrEmpty(sessaoUsuario)) return null;
+            if (string.IsNullOrEmpty(sessaoUsuario)) 
+                return Content("");
 
             Usuario usuario = JsonConvert.DeserializeObject<Usuario>(sessaoUsuario);
 
