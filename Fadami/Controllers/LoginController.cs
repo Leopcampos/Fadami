@@ -109,7 +109,7 @@ namespace Fadami.Controllers
                     _usuarioRepository.Adicionar(usuario);
                     TempData["MensagemSucesso"] = "Novo login cadastrado com sucesso";
                     _sessao.CriarSessaoDoUsuario(usuario);
-                    return RedirectToAction("Index", "Login");
+                    return Sair();
                 }
                 return View(usuario);
             }

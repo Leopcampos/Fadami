@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-               @await Component.InvokeAsync("Menu")
+                @await Component.InvokeAsync("Menu")
             </div>
         </nav>
     </header>
@@ -21,7 +21,12 @@
             @RenderBody()
         </main>
     </div>
-
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <a href="https://fadami.net.br/">&copy; 2023 - Fadami Software & Innovation</a>
+            
+        </div>
+    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.13.2/datatables.min.js"></script>

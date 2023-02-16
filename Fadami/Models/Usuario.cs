@@ -9,24 +9,24 @@ namespace Fadami.Models
         [Key]
         public int Codigo { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O Nome é obrigatório")]
         [Column("NOME")]
         [MaxLength(50)]
         public string Nome { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O Login é obrigatório")]
         [Column("LOGIN")]
         [MaxLength(20)]
         public string Login { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O CPF é obrigatório")]
         [Column("CPF")]
         [MaxLength(14)]
         public string CPF { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "A senha é obrigatória")]
         [Column("SENHA")]
-        [MaxLength(20)]
+        [StringLength(20, MinimumLength = 6, ErrorMessage = "A {0} deve ter no mínimo {2} e no máximo {1} caracteres")]
         public string Senha { get; set; }
 
         public DateTime UltimoAcesso { get; set; }

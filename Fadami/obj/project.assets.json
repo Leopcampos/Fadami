@@ -2231,23 +2231,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LPCAMPOS\\.nuget\\packages\\": {},
+    "C:\\Users\\leopc\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\Projetos em MVC\\Fadami\\Fadami\\Fadami.csproj",
+      "projectUniqueName": "C:\\Leo\\Projetos\\Projetos em MVC\\Fadami\\Fadami\\Fadami.csproj",
       "projectName": "Fadami",
-      "projectPath": "C:\\Projetos\\Projetos em MVC\\Fadami\\Fadami\\Fadami.csproj",
-      "packagesPath": "C:\\Users\\LPCAMPOS\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\Projetos em MVC\\Fadami\\Fadami\\obj\\",
+      "projectPath": "C:\\Leo\\Projetos\\Projetos em MVC\\Fadami\\Fadami\\Fadami.csproj",
+      "packagesPath": "C:\\Users\\leopc\\.nuget\\packages\\",
+      "outputPath": "C:\\Leo\\Projetos\\Projetos em MVC\\Fadami\\Fadami\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\LPCAMPOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\leopc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
