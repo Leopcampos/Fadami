@@ -3,18 +3,33 @@
     ViewData["Title"] = "Listagem de Usuários";
 }
 
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success text-center" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger text-center" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
+}
+
 <div class="text-center">
-    <h1 class="display-4">Sessão do usuário</h1>
-    <br />
-    <br />
-    <h3 class="user">
+    <h1 class="display-4">Sessão do usuário logado</h1>
+    <h3>
         @foreach (var usuario in Model)
         {
             <h4 class="tostring">@usuario.ToString()</h4>
         }
     </h3>
-    <a class="btn btn-danger" asp-area="" asp-controller="Login" asp-action="Sair" role="button">Sair</a>
-    <h2 class="display-4">Consultário usuário</h2>
+</div>
+
+<div class="text-center">
+    <h2 class="display-4">@ViewData["Title"]</h2>
     <table id="table-usuarios" class="display" style="width:100%">
         <thead>
             <tr>

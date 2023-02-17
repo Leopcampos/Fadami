@@ -33,6 +33,10 @@
         <span asp-validation-for="Senha" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-block">Entrar</button>
-    <button type="submit" class="btn btn-success btn-block" asp-controller="Login" asp-action="NovoLogin">Criar Login</button>
+    <p class="mb-4 text-sm mx-auto">
+        Não tem Login?
+        <a asp-action="CriarNovoLogin" asp-controller="Login" class="text-primary text-gradient font-weight-bold">Criar novo usuário</a>
+    </p>
+
+    <button type="submit" class="btn btn-primary col-12">Entrar</button>
 </form>

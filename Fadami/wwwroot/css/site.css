@@ -82,7 +82,12 @@ body {
     height: 31px;
 }
 
-.tostring{
-    font-size: 18px;
-    font-weight:bold;
+.tostring {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.titulao {
+    font-size:30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

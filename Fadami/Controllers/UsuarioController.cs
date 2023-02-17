@@ -23,12 +23,6 @@ namespace Fadami.Controllers
             return View(usuarios);
         }
 
-        public IActionResult BuscarTodos()
-        {
-            List<Usuario> usuarios = _usuarioRepository.BuscarTodos();
-            return View(usuarios);
-        }
-
         public IActionResult Criar()
         {
             return View();
@@ -43,7 +37,7 @@ namespace Fadami.Controllers
                 {
                     _usuarioRepository.Adicionar(usuario);
                     TempData["MensagemSucesso"] = "Usuário cadastrado com sucesso";
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index", "Usuario");
                 }
                 return View(usuario);
             }

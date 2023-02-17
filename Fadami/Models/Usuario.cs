@@ -26,7 +26,7 @@ namespace Fadami.Models
 
         [Required(ErrorMessage = "A senha é obrigatória")]
         [Column("SENHA")]
-        [StringLength(20, MinimumLength = 6, ErrorMessage = "A {0} deve ter no mínimo {2} e no máximo {1} caracteres")]
+        //[StringLength(20, MinimumLength = 6, ErrorMessage = "A {0} deve ter no mínimo {2} e no máximo {1} caracteres")]
         public string Senha { get; set; }
 
         public DateTime UltimoAcesso { get; set; }

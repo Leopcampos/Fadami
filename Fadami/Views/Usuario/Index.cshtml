@@ -1,34 +1,35 @@
 ﻿@model List<Usuario>
 @{
-    ViewData["Title"] = "Usuários";
+    ViewData["Title"] = "Listagem de Usuários";
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success text-center" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemSucesso"]
+    </div>
+}
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger text-center" role="alert">
+        <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+        @TempData["MensagemErro"]
+    </div>
 }
 
 <div class="text-center">
+    <h1 class="display-4">Sessão do usuário logado</h1>
+    <h3>
+        @foreach (var usuario in Model)
+        {
+            <h4 class="tostring">@usuario.ToString()</h4>
+        }
+    </h3>
+</div>
 
-    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" asp-controller="Usuario" asp-action="Criar" role="button">Adicionar novo usuário</a>
-    </div>
-
-    <br />
-
-    @if (TempData["MensagemSucesso"] != null)
-    {
-        <div class="alert alert-success" role="alert">
-            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
-            @TempData["MensagemSucesso"]
-        </div>
-    }
-
-    @if (TempData["MensagemErro"] != null)
-    {
-        <div class="alert alert-danger" role="alert">
-            <button type="button" class="btn btn-danger btn-sm close-alert" data-bs-dismiss="alert" aria-label="Close">X</button>
-            @TempData["MensagemErro"]
-        </div>
-    }
-
-    <br />
-
+<div class="text-center">
+    <h2 class="display-4">@ViewData["Title"]</h2>
     <table id="table-usuarios" class="display" style="width:100%">
         <thead>
             <tr>
@@ -36,11 +37,9 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Login</th>
                 <th scope="col">CPF</th>
-                <th scope="col">Senha</th>
                 <th scope="col">Último Acesso</th>
                 <th scope="col">Qtd Erro Login</th>
                 <th scope="col">BL Ativo</th>
-                <th scope="col">Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -53,16 +52,9 @@
                         <td>@usuario.Nome</td>
                         <td>@usuario.Login</td>
                         <td>@usuario.CPF</td>
-                        <td>@usuario.Senha</td>
                         <td>@usuario.UltimoAcesso</td>
                         <td>@usuario.QtdErroLogin</td>
                         <td>@usuario.BLAtivo</td>
-                        <td>
-                            <div class="btn-group" role="group">
-                                <a role="button" asp-action="Editar" asp-controller="Usuario" asp-route-id="@usuario.Codigo" class="btn btn-primary">Editar</a>
-                                <a role="button" asp-action="ApagarConfirmacao" asp-controller="Usuario" asp-route-id="@usuario.Codigo" class="btn btn-danger">Apagar</a>
-                            </div>
-                        </td>
                     </tr>
                 }
             }

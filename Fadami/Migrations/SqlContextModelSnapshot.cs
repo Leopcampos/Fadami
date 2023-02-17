@@ -59,7 +59,6 @@ namespace Fadami.Migrations
 
                     b.Property<string>("Senha")
                         .IsRequired()
-                        .HasMaxLength(20)
                         .HasColumnType("varchar(20)")
                         .HasColumnName("SENHA");
 

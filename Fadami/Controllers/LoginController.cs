@@ -99,6 +99,11 @@ namespace Fadami.Controllers
             }
         }
 
+        public IActionResult CriarNovoLogin()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult NovoLogin(Usuario usuario)
         {
